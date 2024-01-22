@@ -1,4 +1,4 @@
-using UnityEngine;
+/*using UnityEngine;
 using Unity.Netcode;
 
 public class ActivarObjeto : NetworkBehaviour
@@ -60,6 +60,59 @@ public class ActivarObjeto : NetworkBehaviour
     private void OnTriggerExit(Collider collider)
     {
         if (collider.gameObject.tag == "Punto")
+        {
+            Debug.Log("FUE");
+            DesactivarServerRpc();
+        }
+    }
+}*/
+
+
+using UnityEngine;
+using Unity.Netcode;
+
+public class ActivarObjeto : NetworkBehaviour
+{
+    [SerializeField] private Transform spawnObjectPrefab;
+    private Transform spawnedObject;
+
+    [ServerRpc]
+    private void InstantiaServerRpc()
+    {
+        // Verifica si ya hay una instancia creada
+        if (spawnedObject == null)
+        {
+            spawnedObject = Instantiate(spawnObjectPrefab);
+            spawnedObject.GetComponent<NetworkObject>().Spawn();
+        }
+    }
+
+    [ServerRpc]
+    private void DesactivarServerRpc()
+    {
+        // Verifica si hay una instancia antes de intentar desactivarla
+        if (spawnedObject != null)
+        {
+            spawnedObject.GetComponent<NetworkObject>().Despawn(true);
+            // Puedes destruir el objeto si es necesario
+            // Destroy(spawnedObject.gameObject);
+            // Y también establecer spawnedObject en null para futuras instancias
+            spawnedObject = null;
+        }
+    }
+
+    private void OnTriggerEnter(Collider collider)
+    {
+        if (collider.gameObject.CompareTag("Punto"))
+        {
+            Debug.Log("Choco");
+            InstantiaServerRpc();
+        }
+    }
+
+    private void OnTriggerExit(Collider collider)
+    {
+        if (collider.gameObject.CompareTag("Punto"))
         {
             Debug.Log("FUE");
             DesactivarServerRpc();
