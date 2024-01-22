@@ -103,7 +103,7 @@ public class ActivarObjeto : NetworkBehaviour
 
     private void OnTriggerEnter(Collider collider)
     {
-        if (collider.gameObject.CompareTag("Punto"))
+        if (collider.gameObject.CompareTag("Player"))
         {
             Debug.Log("Choco");
             InstantiaServerRpc();
@@ -112,7 +112,7 @@ public class ActivarObjeto : NetworkBehaviour
 
     private void OnTriggerExit(Collider collider)
     {
-        if (collider.gameObject.CompareTag("Punto"))
+        if (collider.gameObject.CompareTag("Player"))
         {
             Debug.Log("FUE");
             DesactivarServerRpc();
