@@ -1429,6 +1429,7 @@ MonoBehaviour:
   range: 5
   mainCamera: {fileID: 5238957298046043242, guid: 45f089124fe9f6348905fdda45685652, type: 3}
   spawnObjectPrefab: {fileID: 4620422888997803440, guid: 1ecdd564f5ff8e042a66069e8e0cdad6, type: 3}
+  spawnPelota: {fileID: 5446849623083955657, guid: 7ee6311dd32ff73489be0ab6b2e85aa2, type: 3}
 --- !u!114 &2496157525172304645
 MonoBehaviour:
   m_ObjectHideFlags: 0

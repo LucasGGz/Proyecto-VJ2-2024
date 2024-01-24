@@ -25,10 +25,14 @@ public class PlayerController : NetworkBehaviour {
     private Animator anim;
 
     [SerializeField] private Transform spawnObjectPrefab;
+     [SerializeField] private Transform spawnPelota;
+
     private void Start()
     {
         controller = GetComponent<CharacterController>();
         anim = GetComponent<Animator>();
+        InstantiaPelotaServerRpc();
+
     }
 
     private void Update()
@@ -124,7 +128,17 @@ public class PlayerController : NetworkBehaviour {
     {
         Transform spawnObjectTransform = Instantiate(spawnObjectPrefab);
         spawnObjectTransform.GetComponent<NetworkObject>().Spawn();
+
     }
+
+     [ServerRpc]
+    private void InstantiaPelotaServerRpc()
+    {
+        Transform spawnObjectTransform = Instantiate(spawnPelota);
+        spawnObjectTransform.GetComponent<NetworkObject>().Spawn();
+
+    }
+  
   
     public override void OnNetworkSpawn()
     {
