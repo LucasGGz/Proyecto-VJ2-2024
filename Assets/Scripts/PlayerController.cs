@@ -68,7 +68,6 @@ public class PlayerController : NetworkBehaviour {
         }
         else
         {
-            anim.SetBool("salto", false);
             anim.SetBool("corre", false);
             anim.SetBool("quieto", true);
             //Debug.Log("Quieto");
