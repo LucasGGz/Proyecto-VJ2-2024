@@ -25,14 +25,14 @@ public class PlayerController : NetworkBehaviour {
     private Animator anim;
 
     [SerializeField] private Transform spawnObjectPrefab;
-     [SerializeField] private Transform spawnPelota;
+     //[SerializeField] private Transform spawnPelota;
     public AudioListener audioListener;
 
     private void Start()
     {
         controller = GetComponent<CharacterController>();
         anim = GetComponent<Animator>();
-        InstantiaPelotaServerRpc();
+        //InstantiaPelotaServerRpc();
 
     }
 
@@ -62,7 +62,7 @@ public class PlayerController : NetworkBehaviour {
             anim.SetBool("corre", true);
             anim.SetBool("quieto", false);
          //   Debug.Log("En movimiento");
-            // Interpolar la rotación de manera suave
+            // Interpolar la rotaciï¿½n de manera suave
             Quaternion targetRotation = Quaternion.LookRotation(moveDir, Vector3.up);
             controller.transform.rotation = Quaternion.Slerp(controller.transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
         }
@@ -74,7 +74,7 @@ public class PlayerController : NetworkBehaviour {
             //Debug.Log("Quieto");
         }
 
-        // Aplicar la gravedad solo si no está en el suelo
+        // Aplicar la gravedad solo si no estï¿½ en el suelo
         if (!controller.isGrounded)
         {
             float gravedad = 9.8f;
@@ -83,10 +83,10 @@ public class PlayerController : NetworkBehaviour {
         }
         else
         {
-            // Asegurarse de que la velocidad vertical sea negativa cuando está en el suelo
+            // Asegurarse de que la velocidad vertical sea negativa cuando estï¿½ en el suelo
             ySpeed = -0.5f;
   
-            // Manejar el salto mientras está en el suelo
+            // Manejar el salto mientras estï¿½ en el suelo
             if (Input.GetButtonDown("Jump"))
             {
                 anim.SetBool("corre", false);
@@ -117,7 +117,7 @@ public class PlayerController : NetworkBehaviour {
     }
   /*  void OnTriggerEnter(Collider collider)
     {
-        // Verificar si el objeto que colisionó tiene la etiqueta "Player"
+        // Verificar si el objeto que colisionï¿½ tiene la etiqueta "Player"
         if (collider.CompareTag("estructura"))
         {
             InstantiaServerRpc();
@@ -132,13 +132,13 @@ public class PlayerController : NetworkBehaviour {
 
     }
 
-     [ServerRpc]
+     /*[ServerRpc]
     private void InstantiaPelotaServerRpc()
     {
         Transform spawnObjectTransform = Instantiate(spawnPelota);
         spawnObjectTransform.GetComponent<NetworkObject>().Spawn();
 
-    }
+    }*/
   
   
     public override void OnNetworkSpawn()
