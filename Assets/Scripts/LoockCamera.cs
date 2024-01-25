@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class LoockCamera : MonoBehaviour
 {
+    public GameObject TagCam;
     private void LateUpdate()
     {
-        transform.LookAt(transform.position + Camera.main.transform.forward);
+        transform.LookAt(transform.position + TagCam.transform.forward);
     }
 }

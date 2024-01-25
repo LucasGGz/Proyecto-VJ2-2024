@@ -16,7 +16,7 @@ public class PlayerController : NetworkBehaviour {
     private CharacterController controller;
     private Vector3 camForward;
     private Vector3 camRight;
-    public Camera mainCamera;
+    public GameObject CamaraTerceraPer;
     private Vector3 movePlayer;
     private float horizontal;
     private float vertical;
@@ -26,6 +26,7 @@ public class PlayerController : NetworkBehaviour {
 
     [SerializeField] private Transform spawnObjectPrefab;
      [SerializeField] private Transform spawnPelota;
+    public AudioListener audioListener;
 
     private void Start()
     {
@@ -143,6 +144,16 @@ public class PlayerController : NetworkBehaviour {
     public override void OnNetworkSpawn()
     {
         UpdatePositionServerRpc();
+        if (IsOwner)
+        {
+            CamaraTerceraPer.SetActive(true);
+            audioListener.enabled = true;
+        }
+        else
+        {
+            CamaraTerceraPer.SetActive(false);
+        }
+        base.OnNetworkSpawn();
     }
     
     [ServerRpc(RequireOwnership = false)]
@@ -154,8 +165,8 @@ public class PlayerController : NetworkBehaviour {
 
     public void camDirection()
     {
-        camForward = mainCamera.transform.forward;
-        camRight = mainCamera.transform.right;
+        camForward = CamaraTerceraPer.transform.forward;
+        camRight = CamaraTerceraPer.transform.right;
 
         camForward.y = 0;
         camRight.y = 0;
