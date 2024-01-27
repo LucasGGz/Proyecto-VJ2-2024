@@ -10,6 +10,8 @@ public class SpawnerRobot : MonoBehaviour
     {
         Instantiate(robotFactory.Create("Robot1")); //Devuelve el robot1 y lo instancia.
         Instantiate(robotFactory.Create("Robot2")); //Devuelve el robot1 y lo instancia.
+        Instantiate(robotFactory.Create("Robot3")); //Devuelve el robot1 y lo instancia.
+        Instantiate(robotFactory.Create("Robot4")); //Devuelve el robot1 y lo instancia.
     }
 
     // Update is called once per frame
