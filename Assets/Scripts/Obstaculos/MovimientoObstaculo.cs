@@ -13,7 +13,7 @@ public class MovimientoObstaculo : NetworkBehaviour
         transform.Translate(direction * velocidad * Time.deltaTime);
 
         // Si llega al límite, invierte la dirección
-        if (transform.position.z > 8f || transform.position.z < -5f)
+        if (transform.position.z > 10f || transform.position.z < -10f)
         {
             velocidad *= -1;
         }

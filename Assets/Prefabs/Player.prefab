@@ -1175,10 +1175,17 @@ GameObject:
   - component: {fileID: 5756699692510367710}
   - component: {fileID: 2109625703782206205}
   - component: {fileID: 3095397272782730580}
-  - component: {fileID: 5236210525485483376}
   - component: {fileID: 8517858151636864668}
   - component: {fileID: 7044377317064240213}
   - component: {fileID: 366918272840335337}
+  - component: {fileID: 581263205987868073}
+  - component: {fileID: 2294274321462753160}
+  - component: {fileID: 8969332881052038792}
+  - component: {fileID: 9194906104679586862}
+  - component: {fileID: 573177863506924154}
+  - component: {fileID: 5346381580055511804}
+  - component: {fileID: 2703938085385725652}
+  - component: {fileID: 663272449092216959}
   m_Layer: 0
   m_Name: robot
   m_TagString: Player
@@ -1282,25 +1289,6 @@ MonoBehaviour:
   InLocalSpace: 0
   Interpolate: 1
   SlerpPosition: 0
---- !u!114 &5236210525485483376
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4655265290311115125}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 56e44a1fb43783f48a24f6cf01baff44, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 5
-  rotationSpeed: 20
-  jumpSpeed: 25
-  range: 5
-  CamaraTerceraPer: {fileID: 4534067584756256024}
-  spawnObjectPrefab: {fileID: 4620422888997803440, guid: 1ecdd564f5ff8e042a66069e8e0cdad6, type: 3}
-  audioListener: {fileID: 1994711770692128860}
 --- !u!114 &8517858151636864668
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1354,6 +1342,109 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TransitionStateInfoList: []
   m_Animator: {fileID: 7044377317064240213}
+--- !u!114 &581263205987868073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4655265290311115125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15005c9e5ccb39f4e9faeb78f81efe28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  rotationSpeed: 20
+--- !u!114 &2294274321462753160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4655265290311115125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21b8d5ae5ff753748ae6d07f0e6e33d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jumpSpeed: 25
+--- !u!114 &8969332881052038792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4655265290311115125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62d88f018f4d7f048a935ad5b5a96268, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &9194906104679586862
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4655265290311115125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e931f9ba87d122745873eb36bb81991c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &573177863506924154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4655265290311115125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25511800f5d72e344ad018ea696d41fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5346381580055511804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4655265290311115125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86e0baf3b3999b542b61256dcebd6d94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Camara3era: {fileID: 4534067584756256024}
+--- !u!114 &2703938085385725652
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4655265290311115125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bab05a479f2e89447add9403534331e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Camara3era: {fileID: 4534067584756256024}
+  audioListener: {fileID: 1994711770692128860}
+--- !u!114 &663272449092216959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4655265290311115125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8cb1c285bc91eba4db59fdec0651e0ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  range: 8
 --- !u!1 &4808054346499978023
 GameObject:
   m_ObjectHideFlags: 0
