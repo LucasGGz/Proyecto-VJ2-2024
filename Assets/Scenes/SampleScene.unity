@@ -2580,6 +2580,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -477605580965289115, guid: 05e87929b24380543a65e98a57cd5b9a, type: 3}
+      propertyPath: spawnObjectPrefab
+      value: 
+      objectReference: {fileID: 3128736926946002476, guid: 81df3204192ae464797cbaeb8a49342e, type: 3}
     - target: {fileID: 2793770188365285983, guid: 05e87929b24380543a65e98a57cd5b9a, type: 3}
       propertyPath: m_Name
       value: Punto1
@@ -2702,6 +2706,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -673395215143066656, guid: dc063a39080e4324bb1c29ce9f0b3dfa, type: 3}
+      propertyPath: spawnObjectPrefab
+      value: 
+      objectReference: {fileID: 1358926077788294390, guid: a6100f1f0a3b7104e88a36ccab0314ac, type: 3}
     - target: {fileID: 562662172028861025, guid: dc063a39080e4324bb1c29ce9f0b3dfa, type: 3}
       propertyPath: m_Name
       value: Punto2
