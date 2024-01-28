@@ -654,7 +654,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 224130951485110974, guid: 9ed2a051c32b4fe47a5e4fb95c20b03f, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.000061035156
+      value: 0.000061035156
       objectReference: {fileID: 0}
     - target: {fileID: 224166536479716514, guid: 9ed2a051c32b4fe47a5e4fb95c20b03f, type: 3}
       propertyPath: m_AnchorMax.y
@@ -1532,6 +1532,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   generador: {fileID: 1408621356}
+  generadorInvertido: {fileID: 1408621356}
 --- !u!65 &943091718
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1986,6 +1987,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obstaculoPrefab: {fileID: 5236553419263237421, guid: ec332f5dbe9ce224e8e1a4d3abdabc10, type: 3}
+  obstaculoInvertidoPrefab: {fileID: 4083496620231148794, guid: 04081bc4abc63fd44ba1a49b0f9a4b6d, type: 3}
   velocidadMovimiento: 5
 --- !u!4 &1408621357
 Transform:

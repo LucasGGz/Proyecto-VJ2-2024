@@ -5,17 +5,15 @@ using UnityEngine;
 public class ActivadorTrigger : MonoBehaviour
 {
     [SerializeField] private GeneradorObstaculos generador;
-
-    private bool activadorActivo = true; // Variable para controlar si el activador está activo
+    [SerializeField] private GeneradorObstaculos generadorInvertido;
 
     private void OnTriggerEnter(Collider other)
     {
-        if (activadorActivo && other.CompareTag("Player"))
+        if (other.CompareTag("Player"))
         {
-            generador.InstantiarObstaculoServerRpc();
+            generador.ActivarGenerador(false); // Generador normal
+            generadorInvertido.ActivarGenerador(true); // Generador invertido
 
-            // Desactivar el activador después de activar el generador
-            activadorActivo = false;
             gameObject.SetActive(false);
         }
     }
