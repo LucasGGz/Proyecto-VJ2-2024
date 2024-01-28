@@ -378,6 +378,7 @@ GameObject:
   - component: {fileID: 182773861}
   - component: {fileID: 182773860}
   - component: {fileID: 182773859}
+  - component: {fileID: 182773863}
   m_Layer: 0
   m_Name: Sol
   m_TagString: Untagged
@@ -471,6 +472,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1930137284}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &182773863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 182773858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fef3213ce0e8ac34389fa0f8cf83b8b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 10
 --- !u!1 &381155658
 GameObject:
   m_ObjectHideFlags: 0
@@ -654,7 +668,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 224130951485110974, guid: 9ed2a051c32b4fe47a5e4fb95c20b03f, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.000061035156
+      value: -0.000061035156
       objectReference: {fileID: 0}
     - target: {fileID: 224166536479716514, guid: 9ed2a051c32b4fe47a5e4fb95c20b03f, type: 3}
       propertyPath: m_AnchorMax.y
@@ -1799,6 +1813,7 @@ GameObject:
   - component: {fileID: 1119983477}
   - component: {fileID: 1119983476}
   - component: {fileID: 1119983475}
+  - component: {fileID: 1119983479}
   m_Layer: 0
   m_Name: Luna
   m_TagString: Untagged
@@ -1892,6 +1907,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1930137284}
   m_LocalEulerAnglesHint: {x: 0, y: 79.153, z: 0}
+--- !u!114 &1119983479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1119983474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fef3213ce0e8ac34389fa0f8cf83b8b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: -10
 --- !u!1 &1352121172
 GameObject:
   m_ObjectHideFlags: 0
@@ -2054,6 +2082,7 @@ GameObject:
   - component: {fileID: 1583423819}
   - component: {fileID: 1583423818}
   - component: {fileID: 1583423817}
+  - component: {fileID: 1583423821}
   m_Layer: 0
   m_Name: Tierra
   m_TagString: Untagged
@@ -2147,6 +2176,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1930137284}
   m_LocalEulerAnglesHint: {x: 0, y: 160.747, z: 0}
+--- !u!114 &1583423821
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1583423816}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fef3213ce0e8ac34389fa0f8cf83b8b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: -8
 --- !u!1 &1630972095
 GameObject:
   m_ObjectHideFlags: 0
