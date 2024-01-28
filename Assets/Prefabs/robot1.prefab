@@ -109,6 +109,7 @@ GameObject:
   - component: {fileID: 1180523136418942814}
   - component: {fileID: 8097179864325903179}
   - component: {fileID: 1695913634735943335}
+  - component: {fileID: 1793545186123788144}
   m_Layer: 0
   m_Name: robot1
   m_TagString: Untagged
@@ -223,6 +224,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5b269db5f9822e4e859ddf99baac2ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1793545186123788144
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1614532424793750143}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df2868252ab5c4d1da357e8f11f1b524, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SyncPositionX: 1
+  SyncPositionY: 1
+  SyncPositionZ: 1
+  SyncRotAngleX: 1
+  SyncRotAngleY: 1
+  SyncRotAngleZ: 1
+  SyncScaleX: 1
+  SyncScaleY: 1
+  SyncScaleZ: 1
+  PositionThreshold: 0.001
+  RotAngleThreshold: 0.01
+  ScaleThreshold: 0.01
+  UseQuaternionSynchronization: 0
+  UseQuaternionCompression: 0
+  UseHalfFloatPrecision: 0
+  InLocalSpace: 0
+  Interpolate: 1
+  SlerpPosition: 0
 --- !u!1 &1738820581636081388
 GameObject:
   m_ObjectHideFlags: 0
