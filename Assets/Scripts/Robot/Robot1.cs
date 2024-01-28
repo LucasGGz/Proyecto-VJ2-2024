@@ -4,15 +4,12 @@ using UnityEngine;
 
 public class Robot1 : Robot
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public float speed = 5f;
 
-    // Update is called once per frame
-    void Update()
+    public override void Move()
     {
-        
+        Debug.Log("Robot1 se está moviendo hacia adelante.");
+        // Movimiento de Robot1: Avanza en línea recta
+        transform.Translate(Vector3.forward *speed* Time.deltaTime);
     }
 }

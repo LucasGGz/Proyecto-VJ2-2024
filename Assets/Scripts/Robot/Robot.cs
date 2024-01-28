@@ -1,21 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Unity.Netcode;
 
-public abstract class Robot : MonoBehaviour
+public abstract class Robot : NetworkBehaviour
 {
     [SerializeField] private string id;
 
     public string Id {get => id;}
-    // Start is called before the first frame update
-    void Start()
+   
+      // Método concreto que llama al método abstracto
+    [ServerRpc]
+    public virtual void MoveServerRpc()
     {
-        
+        Move();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    // Método abstracto para el movimiento
+    public abstract void Move();
+
 }

@@ -1,18 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Unity.Netcode;
 
 public class Robot2 : Robot
 {
-    // Start is called before the first frame update
-    void Start()
+     public override void Move()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        // Implementa el movimiento específico para Robot1
+        Debug.Log("Robot2 se está moviendo hacia adelante.");
+        transform.Rotate(Vector3.up, -1.0f);
     }
 }
