@@ -5,13 +5,22 @@ using Unity.Netcode;
 
 public class GeneradorObstaculos : NetworkBehaviour
 {
-    [SerializeField] public GameObject obstaculoPrefab; // Prefab del obstáculo
-    public float velocidadMovimiento = 5f; // Velocidad de movimiento de los obstáculos
+    [SerializeField] public GameObject obstaculoPrefab;
+    [SerializeField] public GameObject obstaculoInvertidoPrefab;
+
+    public float velocidadMovimiento = 5f;
 
     [ServerRpc]
-    public void InstantiarObstaculoServerRpc()
+    public void InstantiarObstaculoServerRpc(bool invertido)
     {
-        GameObject nuevoObstaculo = Instantiate(obstaculoPrefab);
+        GameObject nuevoObstaculo = Instantiate(invertido ? obstaculoInvertidoPrefab : obstaculoPrefab);
+
+        // Lógica para Spawn (si es necesario)
         nuevoObstaculo.GetComponent<NetworkObject>().Spawn(true);
+    }
+
+    public void ActivarGenerador(bool invertido)
+    {
+        InstantiarObstaculoServerRpc(invertido);
     }
 }
