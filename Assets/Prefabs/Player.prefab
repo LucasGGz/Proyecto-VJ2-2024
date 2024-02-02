@@ -1243,6 +1243,7 @@ GameObject:
   - component: {fileID: 7983016578085974019}
   - component: {fileID: 789438241442042220}
   - component: {fileID: 3808714776523103764}
+  - component: {fileID: 3609453686011577634}
   m_Layer: 0
   m_Name: robot
   m_TagString: Player
@@ -1554,6 +1555,19 @@ CapsuleCollider:
   m_Height: 5.71
   m_Direction: 1
   m_Center: {x: 0, y: 2.63, z: 0}
+--- !u!114 &3609453686011577634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4655265290311115125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53745715c38a4e14280009f20af87f09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Initial: {fileID: 8907277591048878748, guid: 865a7711abc049542b06e1b68b2f838c, type: 3}
 --- !u!1 &4808054346499978023
 GameObject:
   m_ObjectHideFlags: 0

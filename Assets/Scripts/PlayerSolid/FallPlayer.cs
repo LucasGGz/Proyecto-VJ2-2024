@@ -15,7 +15,7 @@ public class FallPlayer : NetworkBehaviour
     void Update()
     {
         if (!IsOwner) return;
-        if (transform.position.y <= -20f)
+        if (transform.position.y <= -50f)
         {
             transform.position = limit;
             Debug.Log("se cayo");

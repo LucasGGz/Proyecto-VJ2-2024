@@ -8,6 +8,7 @@ TagManager:
   - Final
   - Premio
   - Estructura
+  - BallDead
   layers:
   - Default
   - TransparentFX
