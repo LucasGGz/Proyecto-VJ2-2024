@@ -3,51 +3,8 @@ using System.Collections.Generic;
 using Unity.Netcode;
 using UnityEngine;
 
-public class Ordenamiento : NetworkBehaviour
+public class Bubble : NetworkBehaviour, Isortable
 {
-    /*  [SerializeField] private GameObject[] Cubes;
-      [SerializeField] private GameObject ubicacion;
-      private bool genera = true;
-      public GameObject[] inst;*/
-    Invoke invoke;
-    private bool genera = true;
-
-    void Start()
-    {
-      invoke = GetComponent<Invoke>();
-    }
-    private void OnTriggerEnter(Collider collider)
-    {
-        if (collider.gameObject.CompareTag("Player") && genera)
-        {
-            invoke.Action();
-            Debug.Log("Choco");
-          //  InitializeRandom();
-        //    StartCoroutine(BubbleSort(inst));
-            genera = false;
-        }
-    }
-
- /*   public void InitializeRandom()
-    {
-        inst = new GameObject[Cubes.Length];
-
-        float spacing = 0.1f; // Espacio en el eje X entre los cubos
-
-        for (int i = 0; i < Cubes.Length; i++)
-        {
-            // Instanciar el prefab
-            GameObject instancia = Instantiate(Cubes[i]);
-
-            // Ajustar la posición con espacio en el eje X
-            instancia.transform.position = new Vector3(i * (instancia.transform.localScale.x + spacing)+10, instancia.transform.localScale.y / 2-1, 30);
-         //   instancia.transform.parent = this.transform;
-            // Almacena la instancia en el array
-            inst[i] = instancia;
-        }
-
-    }
-
     public IEnumerator BubbleSort(GameObject[] unsortedList)
     {
 
@@ -99,5 +56,5 @@ public class Ordenamiento : NetworkBehaviour
             if (!swapped)
                 break;
         }
-    }*/
+    }
 }
