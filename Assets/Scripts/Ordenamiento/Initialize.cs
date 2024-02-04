@@ -21,7 +21,7 @@ public class Initialize : NetworkBehaviour, Iinitializable
             GameObject instancia = Instantiate(Cubes[i]);
 
             // Ajustar la posición con espacio en el eje X
-            instancia.transform.position = new Vector3(i * (instancia.transform.localScale.x + spacing) + 10, instancia.transform.localScale.y / 2 - 1, 30);
+            instancia.transform.position = new Vector3(i * (instancia.transform.localScale.x + spacing) +18, instancia.transform.localScale.y / 2 , 1.5f);
             //   instancia.transform.parent = this.transform;
             // Almacena la instancia en el array
             inst[i] = instancia;
