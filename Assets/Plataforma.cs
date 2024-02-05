@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Plataforma : NetworkBehaviour
 {
-  private void OnCollisionStay(Collision collision)
+  private void OnCollisionEnter(Collision collision)
 {
     // Si el jugador está en la plataforma, moverlo junto con ella
     if (collision.gameObject.CompareTag("Player"))
