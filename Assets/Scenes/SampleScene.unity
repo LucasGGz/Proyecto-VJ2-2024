@@ -5076,6 +5076,7 @@ GameObject:
   - component: {fileID: 7965432218379279353}
   - component: {fileID: 5070430007404323507}
   - component: {fileID: 8608757248316130855}
+  - component: {fileID: 8608757248316130856}
   m_Layer: 0
   m_Name: default
   m_TagString: Untagged
@@ -5751,6 +5752,7 @@ GameObject:
   - component: {fileID: 7142366400215018808}
   - component: {fileID: 5461150261464683634}
   - component: {fileID: 8857556939303907558}
+  - component: {fileID: 8857556939303907559}
   m_Layer: 0
   m_Name: default
   m_TagString: Untagged
@@ -8774,6 +8776,28 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &8608757248316130856
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1170031108246259906}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -2432090755550338912, guid: 6dcc657a2d4d3e44391d4537a3386920, type: 3}
 --- !u!33 &8674217961463699575
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -8957,6 +8981,28 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &8857556939303907559
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2137212114683461123}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -2432090755550338912, guid: 1bc8c7810d421ee46a6d3a886bff580e, type: 3}
 --- !u!114 &8985635021307705898
 MonoBehaviour:
   m_ObjectHideFlags: 0
