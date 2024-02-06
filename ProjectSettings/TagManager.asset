@@ -10,6 +10,7 @@ TagManager:
   - Estructura
   - BallDead
   - Plataforma
+  - PremioEstructura
   layers:
   - Default
   - TransparentFX

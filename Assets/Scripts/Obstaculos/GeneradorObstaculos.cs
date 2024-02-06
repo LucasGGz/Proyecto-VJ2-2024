@@ -10,7 +10,7 @@ public class GeneradorObstaculos : NetworkBehaviour
 
     public float velocidadMovimiento = 5f;
 
-    [ServerRpc]
+    [ServerRpc(RequireOwnership = false)]
     public void InstantiarObstaculoServerRpc(bool invertido)
     {
         GameObject nuevoObstaculo = Instantiate(invertido ? obstaculoInvertidoPrefab : obstaculoPrefab);

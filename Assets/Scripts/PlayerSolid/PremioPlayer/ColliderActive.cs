@@ -21,7 +21,7 @@ public class ColliderActive : NetworkBehaviour
     void OnTriggerEnter(Collider collider)
     {
         // Verificar si el objeto que colisionó tiene la etiqueta "Player"
-        if (collider.CompareTag("Estructura") && band)
+        if (collider.CompareTag("PremioEstructura") && band)
         {
             band = false;
             activePj.ActiveServerRpc();
