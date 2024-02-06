@@ -12,7 +12,7 @@ public class MovimientoInvertidoObstaculo : NetworkBehaviour
     {
         transform.Translate(-direction * velocidad * Time.deltaTime);
 
-        if (transform.position.z > 10f || transform.position.z < -10f)
+        if (transform.position.z > 121f || transform.position.z < 112f)
         {
             velocidad *= -1;
         }

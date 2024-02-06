@@ -11,7 +11,7 @@ public class MovimientoObstaculo : NetworkBehaviour
     {
         transform.Translate(direction * velocidad * Time.deltaTime);
 
-        if (transform.position.z > 10f || transform.position.z < -10f)
+        if (transform.position.z > 113f || transform.position.z < 108f)
         {
             velocidad *= -1;
         }
