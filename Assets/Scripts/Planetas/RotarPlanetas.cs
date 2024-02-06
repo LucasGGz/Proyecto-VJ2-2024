@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class RotarOlanetas : MonoBehaviour
+public class RotarPlanetas : MonoBehaviour
 {
     public float rotationSpeed = 10f; // Velocidad de rotación
 
