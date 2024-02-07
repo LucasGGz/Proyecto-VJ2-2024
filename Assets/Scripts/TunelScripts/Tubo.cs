@@ -32,13 +32,13 @@ public class Tubo : NetworkBehaviour
             tuboAnim.IsOpen();
 
             // Esperar un tiempo aleatorio antes de reproducir la segunda animación
-            float tiempoEspera = Random.Range(1f, 2f);
+            float tiempoEspera = Random.Range(3f, 5f);
             yield return new WaitForSeconds(tiempoEspera);
-
+  
             // Reproducir la segunda animación
             //animator.Play("salio");
             tuboAnim.IsClosed();
-            float tiempoEspera2 = Random.Range(2f, 5f);
+            float tiempoEspera2 = Random.Range(3f, 5f);
             yield return new WaitForSeconds(tiempoEspera2);
         }
     }
