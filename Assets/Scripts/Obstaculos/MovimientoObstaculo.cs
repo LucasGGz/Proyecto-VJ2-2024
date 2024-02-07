@@ -4,24 +4,33 @@ using Unity.Netcode;
 
 public class MovimientoObstaculo : NetworkBehaviour
 {
-    public float velocidad = 5f;
+    private float amplitud = 2f; // La amplitud del movimiento lateral
+    private float velocidad = 1f; // La velocidad del movimiento lateral
 
-   [ServerRpc]
-    private void MoverObstaculoServerRpc(Vector3 position, Vector3 direction)
+    private float tiempoInicio;
+
+    private void Start()
     {
-        transform.Translate(direction * velocidad * Time.deltaTime);
+        // Guardar el tiempo de inicio para asegurar un movimiento suave
+        tiempoInicio = Time.time;
+    }
 
-        if (transform.position.z > 113f || transform.position.z < 108f)
-        {
-            velocidad *= -1;
-        }
+    [ServerRpc]
+    private void MoverObstaculoServerRpc(Vector3 position)
+    {
+        // Calcular la posición lateral utilizando una función sinusoidal
+        float desplazamientoLateral = amplitud * Mathf.Sin((Time.time - tiempoInicio) * velocidad);
+        Vector3 direccionLateral = new Vector3(0,0,1) * desplazamientoLateral;
+
+        // Mover el obstáculo
+        transform.position += direccionLateral * Time.deltaTime;
     }
 
     private void Update()
     {
         if (IsServer)
         {
-            MoverObstaculoServerRpc(transform.position, transform.forward);
+            MoverObstaculoServerRpc(transform.position);
         }
     }
 }
