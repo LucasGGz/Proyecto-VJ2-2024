@@ -16,7 +16,7 @@ public class Tubo : NetworkBehaviour
         MechanismInServerRpc();
     }
 
-    [ServerRpc(RequireOwnership = false)]
+    [ServerRpc]
     public void MechanismInServerRpc()
     {
         StartCoroutine(Mechanism());

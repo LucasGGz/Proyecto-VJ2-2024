@@ -20,7 +20,7 @@ public class Ordenamiento : NetworkBehaviour
     {
         if (collider.gameObject.CompareTag("Player") && genera)
         {
-            invoke.Action();
+            invoke.ActionInServerRpc();
             Debug.Log("Choco");
           //  InitializeRandom();
         //    StartCoroutine(BubbleSort(inst));

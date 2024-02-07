@@ -16,7 +16,7 @@ public class PunchV2 : NetworkBehaviour
         MechanismPunchInServerRpc();
     }
 
-    [ServerRpc(RequireOwnership = false)]
+    [ServerRpc]
     public void MechanismPunchInServerRpc()
     {
         StartCoroutine(PunchGo());

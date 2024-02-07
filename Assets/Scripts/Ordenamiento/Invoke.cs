@@ -13,7 +13,14 @@ public class Invoke : NetworkBehaviour
         isortable = GetComponent<Isortable>();
     }
 
-    public void Action()
+    [ServerRpc]
+    public void ActionInServerRpc()
+    {
+        ActionClientRpc();
+    }
+
+    [ClientRpc]
+    public void ActionClientRpc()
     {
         initialize.InitializeRandom();
         StartCoroutine(isortable.BubbleSort(initialize.inst));
