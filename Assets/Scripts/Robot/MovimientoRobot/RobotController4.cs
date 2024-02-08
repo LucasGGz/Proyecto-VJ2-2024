@@ -8,12 +8,12 @@ public class RobotController4 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        mover = new MovimientoAdelanteAtras();
+        mover = new MovimientoRotacional();
     }
 
     // Update is called once per frame
     void Update()
     {
-        mover.Move(transform, 5f);
+        mover.Move(transform, 40f);
     }
 }

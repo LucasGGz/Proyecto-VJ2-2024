@@ -9,7 +9,7 @@ public abstract class Robot : NetworkBehaviour
 
     public string Id {get => id;}
    
-      // Método concreto que llama al método abstracto
+   /*   // Método concreto que llama al método abstracto
     [ServerRpc]
     public virtual void MoveServerRpc()
     {
@@ -17,6 +17,6 @@ public abstract class Robot : NetworkBehaviour
     }
 
     // Método abstracto para el movimiento
-    public abstract void Move();
+    public abstract void Move();*/
 
 }

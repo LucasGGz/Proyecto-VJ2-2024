@@ -8,12 +8,12 @@ public class RobotController3 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        mover = new MovimientoLateral();
+        mover = new MovimientoZigZag();
     }
 
     // Update is called once per frame
     void Update()
     {
-        mover.Move(transform, 8f);
+        mover.Move(transform, 9f);
     }
 }
