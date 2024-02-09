@@ -18,7 +18,7 @@ public class InstanciaColliderWin : NetworkBehaviour
         if (other.CompareTag("Premio") && band)
         {
             band = false;
-            win.PremioFinalServerRpc();
+            win.PremioFinalInServerRpc();
 
             Debug.Log("El premio ah sido chcocado y ganaste");
         }

@@ -10,9 +10,14 @@ public class IntanciaWin : NetworkBehaviour
 
 
     [ServerRpc(RequireOwnership = false)]
-    public void PremioFinalServerRpc()
+    public void PremioFinalInServerRpc()
     {
-        Transform spawnObjectTransform = Instantiate(PremioFinal,transform.position,transform.rotation);
+        PremioFinalClientRpc();
+    }
+    [ClientRpc]
+    public void PremioFinalClientRpc()
+    {
+        Transform spawnObjectTransform = Instantiate(PremioFinal, transform.position, transform.rotation);
 
         // Sincronizar la instancia en la red
         spawnObjectTransform.GetComponent<NetworkObject>().Spawn();

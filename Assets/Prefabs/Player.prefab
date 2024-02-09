@@ -1506,7 +1506,6 @@ GameObject:
   - component: {fileID: 6854208289798342086}
   - component: {fileID: 5756699692510367710}
   - component: {fileID: 3095397272782730580}
-  - component: {fileID: 8517858151636864668}
   - component: {fileID: 7044377317064240213}
   - component: {fileID: 366918272840335337}
   - component: {fileID: 581263205987868073}
@@ -1522,7 +1521,8 @@ GameObject:
   - component: {fileID: 7983016578085974019}
   - component: {fileID: 789438241442042220}
   - component: {fileID: 3808714776523103764}
-  - component: {fileID: 3609453686011577634}
+  - component: {fileID: 693237981254667645}
+  - component: {fileID: 5930861632977318715}
   m_Layer: 0
   m_Name: robot
   m_TagString: Player
@@ -1605,24 +1605,6 @@ MonoBehaviour:
   InLocalSpace: 0
   Interpolate: 1
   SlerpPosition: 0
---- !u!114 &8517858151636864668
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4655265290311115125}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: acabc5a1073790046b0417ddf42ab86f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  meshRenderer: {fileID: 0}
-  playername: {fileID: 5364639872449163685}
-  colors:
-  - {r: 0.9150943, g: 0.2978373, b: 0.662311, a: 0}
-  - {r: 0.24857599, g: 0.7606641, b: 0.9245283, a: 0}
-  - {r: 0.64940494, g: 0.8773585, b: 0.23589355, a: 0}
 --- !u!95 &7044377317064240213
 Animator:
   serializedVersion: 5
@@ -1834,7 +1816,7 @@ CapsuleCollider:
   m_Height: 5.71
   m_Direction: 1
   m_Center: {x: 0, y: 2.63, z: 0}
---- !u!114 &3609453686011577634
+--- !u!114 &693237981254667645
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1843,9 +1825,27 @@ MonoBehaviour:
   m_GameObject: {fileID: 4655265290311115125}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 53745715c38a4e14280009f20af87f09, type: 3}
+  m_Script: {fileID: 11500000, guid: 382927f69cd6c094b9decdf121dd8d3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  meshRenderer: {fileID: 7071106883735304173}
+  colors:
+  - {r: 0.9137255, g: 0.29803923, b: 0.6627451, a: 0}
+  - {r: 0.24705882, g: 0.7607843, b: 0.9254902, a: 0}
+  - {r: 0.6509804, g: 0.8784314, b: 0.23529412, a: 0}
+--- !u!114 &5930861632977318715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4655265290311115125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 269231f02c9a96d47acc072aca09e29f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playername: {fileID: 5364639872449163685}
 --- !u!1 &4808054346499978023
 GameObject:
   m_ObjectHideFlags: 0
