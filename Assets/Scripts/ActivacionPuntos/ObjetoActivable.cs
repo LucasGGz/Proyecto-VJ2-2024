@@ -7,6 +7,7 @@ public class ObjetoActivable : MonoBehaviour
     [SerializeField] private Transform spawnObjectPrefab;
     private Transform spawnedObject;
 
+    // Método para instanciar el objeto
     public void InstantiarObjeto()
     {
         // Verifica si ya hay una instancia creada
@@ -16,6 +17,7 @@ public class ObjetoActivable : MonoBehaviour
         }
     }
 
+    // Método para desactivar el objeto
     public void DesactivarObjeto()
     {
         // Verifica si hay una instancia antes de intentar desactivarla

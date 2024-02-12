@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// Clase RobotController2 que controla el movimiento del Robot2.
 public class RobotController2 : MonoBehaviour
 {
     private BaseMovimiento mover;

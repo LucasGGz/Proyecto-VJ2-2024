@@ -1,5 +1,6 @@
 using UnityEngine;
 
+// Clase que se encarga del MovimientoRotacional.
 public class MovimientoRotacional : BaseMovimiento
 {
     // Método de la interfaz IMovable para rotar el objeto
