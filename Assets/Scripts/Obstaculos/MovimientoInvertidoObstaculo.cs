@@ -5,31 +5,30 @@ using Unity.Netcode;
 
 public class MovimientoInvertidoObstaculo : NetworkBehaviour
 {
-    private float amplitud = 3f; // La amplitud del movimiento lateral
-    private float velocidad = 1f; // La velocidad del movimiento lateral
+    private float amplitud = 3f; 
+    private float velocidad = 1f; 
 
     private float tiempoInicio;
 
     private void Start()
     {
-        // Guardar el tiempo de inicio para asegurar un movimiento suave
+        // Guarda el tiempo de inicio 
         tiempoInicio = Time.time;
     }
 
     [ServerRpc]
     private void MoverObstaculoServerRpc(Vector3 position)
     {
-        // Calcular la posición lateral utilizando una función sinusoidal
+        // Calcula el desplazamiento lateral 
         float desplazamientoLateral = amplitud * Mathf.Sin((Time.time - tiempoInicio) * velocidad);
-        Vector3 direccionLateral = new Vector3(0, 0, -1) * desplazamientoLateral; // Cambiado de 1 a -1
+        Vector3 direccionLateral = new Vector3(0, 0, -1) * desplazamientoLateral; 
 
-        // Mover el obstáculo
         transform.position += direccionLateral * Time.deltaTime;
     }
 
     private void Update()
     {
-        if (IsServer)
+        if (IsServer) // Verifica si el script se está ejecutando en el servidor
         {
             MoverObstaculoServerRpc(transform.position);
         }

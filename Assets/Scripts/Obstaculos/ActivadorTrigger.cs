@@ -7,6 +7,7 @@ public class ActivadorTrigger : MonoBehaviour
     [SerializeField] private GeneradorObstaculos generador;
     [SerializeField] private GeneradorObstaculos generadorInvertido;
 
+    //Metodo de collision
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))

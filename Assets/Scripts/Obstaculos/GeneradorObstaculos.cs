@@ -15,12 +15,12 @@ public class GeneradorObstaculos : NetworkBehaviour
     {
         GameObject nuevoObstaculo = Instantiate(invertido ? obstaculoInvertidoPrefab : obstaculoPrefab);
 
-        // Lógica para Spawn (si es necesario)
+        // Lógica para Spawn en la red
         nuevoObstaculo.GetComponent<NetworkObject>().Spawn(true);
     }
 
     public void ActivarGenerador(bool invertido)
     {
-        InstantiarObstaculoServerRpc(invertido);
+        InstantiarObstaculoServerRpc(invertido); // Llama al RPC del servidor para instanciar un obstáculo
     }
 }
