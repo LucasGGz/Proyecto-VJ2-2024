@@ -13,7 +13,7 @@ public class CalculoPlaneCam : MonoBehaviour
     }
 
     
-    //calcular el plano cercano a la camara que parece un rectangulo
+    //Calcular el plano cercano a la camara que parece un rectangulo
     private void CalculateNearPlane()
     {
         float height = Mathf.Tan(player.Camera.fieldOfView * Mathf.Deg2Rad / 2) * player.Camera.nearClipPlane; //se calcula en funcion de la tan para obtener el alto

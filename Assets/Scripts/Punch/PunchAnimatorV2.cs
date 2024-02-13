@@ -14,12 +14,14 @@ public class PunchAnimatorV2 : MonoBehaviour
         anim = GetComponent<Animator>();
     }
 
+    // Método para reproducir la animación de golpe del segundo puño
     public void IsPunchV2()
     {
-        anim.Play(IS_PunchV2);
+        anim.Play(IS_PunchV2); // Activar la animación de golpe
     }
+    // Método para reproducir la animación de guardar golpe del segundo puño
     public void IsNoPunchV2()
     {
-        anim.Play(IS_NoPunchV2);
+        anim.Play(IS_NoPunchV2); // Activar la animación de guardar golpe
     }
 }

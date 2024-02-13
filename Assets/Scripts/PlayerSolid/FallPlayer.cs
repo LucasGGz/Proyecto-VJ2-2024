@@ -5,9 +5,11 @@ using UnityEngine;
 
 public class FallPlayer : NetworkBehaviour
 {
+    // Variables para los puntos de posición a los que el jugador será teletransportado al caer
     private Vector3 limit, limit2, limit3, limitV2, limit4, limit5, limit6, limit7, limit8, limit9;
     void Start()
     {
+        // Inicialización de los puntos de posición
         limit = new Vector3(0, 2f, 0);
         limit2 = new Vector3(0, 3f, 90f);
         limitV2 = new Vector3(62, 3f, 90f);
@@ -21,17 +23,13 @@ public class FallPlayer : NetworkBehaviour
         limit9 = new Vector3(4, 11, 412);
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (!IsOwner) return;
-        /*   if (transform.position.y <= -50f)
-           {
-               transform.position = limit;
-               Debug.Log("se cayo");
-           }*/
+        // Verificar si el jugador ha caído por debajo de cierta altura
         if (transform.position.y <= -40f)
         {
+            // Y determinar la posición a la que se teletransportará el jugador según su posición en el eje Z o en X
             if (transform.position.z > 407)
             {
                 transform.position = limit9;
@@ -73,6 +71,7 @@ public class FallPlayer : NetworkBehaviour
             }
             else
             {
+                // Si el jugador no está en una posición especial, teletransportarlo al límite predeterminado
                 transform.position = limit;
             }
 

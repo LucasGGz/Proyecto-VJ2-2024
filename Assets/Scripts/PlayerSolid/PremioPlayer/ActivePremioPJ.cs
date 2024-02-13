@@ -7,18 +7,15 @@ public class ActivePremioPJ : NetworkBehaviour
 {
     public GameObject obj;
 
-    void Start()
-    {
-
-    }
-
+    //Metodo que se va a llamar para activar el premio
+    //Metodo que tiene el mensaje que se va a enviar a los clientes y de los clientes al server
     [ServerRpc(RequireOwnership = false)]
     public void ActiveServerRpc()
     {
         ActiveClientRpc();
     }
 
-
+    // Método RPC para mandar un mensaje a los clientes
     [ClientRpc]
     public void ActiveClientRpc()
     {
@@ -27,7 +24,7 @@ public class ActivePremioPJ : NetworkBehaviour
 
     public void Active()
     {
-
+        //Activa el premio
         obj.SetActive(true);
     }
 

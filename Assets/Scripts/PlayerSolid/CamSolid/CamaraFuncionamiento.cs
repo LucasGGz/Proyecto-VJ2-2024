@@ -21,6 +21,7 @@ public class CamaraFuncionamiento : MonoBehaviour
         FuncionamientoCamara();
     }
 
+    //Funcionamiento de la camara
     private void FuncionamientoCamara()
     {
         //para que orbite al jugador

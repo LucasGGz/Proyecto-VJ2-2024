@@ -5,24 +5,28 @@ using UnityEngine;
 
 public class Invoke : NetworkBehaviour
 {
+    //Interfaces para la inicializacion y el algoritmo
     Initialize initialize;
     Isortable isortable;
     void Start()
     {
-       initialize = GetComponent<Initialize>();
+        // Obtener referencias a los componentes Initialize e Isortable
+        initialize = GetComponent<Initialize>();
         isortable = GetComponent<Isortable>();
     }
 
+    // Método llamado en el servidor para iniciar la acción en los clientes
     [ServerRpc]
     public void ActionInServerRpc()
     {
         ActionClientRpc();
     }
 
+    // Método llamado en los clientes para ejecutar la acción
     [ClientRpc]
     public void ActionClientRpc()
-    {
-        initialize.InitializeRandom();
-        StartCoroutine(isortable.BubbleSort(initialize.inst));
+    {  
+        initialize.InitializeRandom();// Inicializa los objetos 
+        StartCoroutine(isortable.BubbleSort(initialize.inst));  // Inicia el proceso de ordenamiento de burbuja en los objetos inicializados
     }
 }

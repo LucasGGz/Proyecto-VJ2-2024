@@ -13,6 +13,7 @@ public class CamaraInput : MonoBehaviour
     //inputs para el mouse
     void Update()
     {
+        //Se le asignan los Inputs
         Ver = Input.GetAxis("Mouse Y");
         Hor = Input.GetAxis("Mouse X");
     }

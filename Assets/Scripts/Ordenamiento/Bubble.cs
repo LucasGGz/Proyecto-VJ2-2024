@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using Unity.Netcode;
 using UnityEngine;
 
+//exitende de la interfaz y se cumple el contrato de esta
 public class Bubble : NetworkBehaviour, Isortable
 {
+    // Método de la interfaz, para ordenar una lista de GameObjects utilizando el algoritmo de ordenación de burbuja
     public IEnumerator BubbleSort(GameObject[] unsortedList)
     {
 

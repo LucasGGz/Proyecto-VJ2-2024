@@ -11,11 +11,12 @@ public class TuboAnimator : NetworkBehaviour
     {
         anim = GetComponent<Animator>();
     }
-
+    // Método para reproducir la animación de apertura
     public void IsOpen()
     {
         anim.Play(IS_OPEN);
     }
+    // Método para reproducir la animación de cierre
     public void IsClosed()
     {
         anim.Play(IS_CLOSE);

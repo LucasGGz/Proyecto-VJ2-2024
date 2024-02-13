@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class PlayerMov : NetworkBehaviour
 {
+    //Variables nesesarias para el movimiento del Player 
     [SerializeField] private float speed;
     [SerializeField] private float rotationSpeed;
 
@@ -13,7 +14,7 @@ public class PlayerMov : NetworkBehaviour
     private Vector3 movePlayer;
     private Vector3 playerInput;
     private Vector3 moveDir;
-
+    //Varaibles para la obtencion de componentes
     private PlayerAnimator animator;
     private PlayerCamDire camPlayerDire;
     private PlayerInput plaInput;
@@ -33,31 +34,23 @@ public class PlayerMov : NetworkBehaviour
 
     private void Update()
     {
-
+        //verificar si el la siguientes instancia ya no es el propietario, podra controlar su propio Player
         if (!IsOwner) return;
 
-
         playerInput = new Vector3(plaInput.Horizontal, 0, plaInput.Vertical).normalized;
-        // playerInput = Vector3.ClampMagnitude(playerInput, 1);
-
-
+        //calcular la direccion de movimiento
         moveDir = playerInput.x * camPlayerDire.CamRight + playerInput.z * camPlayerDire.CamForward;
+        //darle al player la direccion de mov y una velocidad
         movePlayer = moveDir * Speed;
 
-        /* if (Input.GetKeyDown(KeyCode.T))
-         {
-             InstantiaServerRpc();
-         }*/
-
-
-        // Verificar si moveDir tiene una magnitud suficiente antes de usar LookRotation
+        // Verificar si el jugador se mueve o no activara sus respectivas animaciones  
         if (moveDir.magnitude > 0.1f)
         {
             animator.Running = true;
 
             animator.Walking = false;
 
-            // Interpolar la rotación de manera suave
+            // Rotar suavemente al jugador hacia la dirección de movimiento
             Quaternion targetRotation = Quaternion.LookRotation(moveDir, Vector3.up);
             controller.transform.rotation = Quaternion.Slerp(controller.transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
         }
@@ -69,12 +62,10 @@ public class PlayerMov : NetworkBehaviour
 
         }
 
-
-
         // Aplicar movimiento vertical
         movePlayer.y = plajump.YSpeed;
 
-        // Aplicar movimiento
+        // Aplicar movimiento al jugador
         controller.Move(movePlayer * Time.deltaTime);
     }
 

@@ -11,24 +11,25 @@ public class Tubo : NetworkBehaviour
         tuboAnim = GetComponent<TuboAnimator>();
     }
 
+    // Método llamado cuando el objeto se instancia en la red
     public override void OnNetworkSpawn()
     {
         MechanismInServerRpc();
     }
 
+    // Método RPC para iniciar el mecanismo en el servidor
     [ServerRpc]
     public void MechanismInServerRpc()
     {
         StartCoroutine(Mechanism());
     }
 
-
+    // Corrutina que controla el mecanismo del tubo
     public IEnumerator Mechanism()
     {
         while (true)
         {
             // Reproducir la primera animación
-            //animator.Play("vino");
             tuboAnim.IsOpen();
 
             // Esperar un tiempo aleatorio antes de reproducir la segunda animación
@@ -36,7 +37,6 @@ public class Tubo : NetworkBehaviour
             yield return new WaitForSeconds(tiempoEspera);
   
             // Reproducir la segunda animación
-            //animator.Play("salio");
             tuboAnim.IsClosed();
             float tiempoEspera2 = Random.Range(3f, 5f);
             yield return new WaitForSeconds(tiempoEspera2);

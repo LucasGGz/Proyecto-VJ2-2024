@@ -11,18 +11,20 @@ public class PunchV3 : NetworkBehaviour
         PunchAnimV3 = GetComponent<PunchAnimatorV3>();
     }
 
+    // Método llamado cuando el objeto se instancia en la red
     public override void OnNetworkSpawn()
     {
         MechanismPunchInServerRpc();
     }
 
+    // Método RPC para iniciar el mecanismo de golpes en el servidor
     [ServerRpc]
     public void MechanismPunchInServerRpc()
     {
         StartCoroutine(PunchGo());
     }
 
-
+    // Corrutina que controla el mecanismo de golpes
     public IEnumerator PunchGo()
     {
         while (true)

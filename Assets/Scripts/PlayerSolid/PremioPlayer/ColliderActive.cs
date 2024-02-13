@@ -12,19 +12,13 @@ public class ColliderActive : NetworkBehaviour
         activePj = GetComponent<ActivePremioPJ>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     void OnTriggerEnter(Collider collider)
     {
-        // Verificar si el objeto que colisionó tiene la etiqueta "Player"
+        // Verificar si el objeto que colisionó tiene la etiqueta "PremioEstructura" y activa el Premio al jugador
         if (collider.CompareTag("PremioEstructura") && band)
         {
             band = false;
-            activePj.ActiveServerRpc();
+            activePj.ActiveServerRpc(); //activa el premio
             Debug.Log("ActivastePremio");
         }
     }

@@ -14,12 +14,15 @@ public class PunchAnimator : NetworkBehaviour
         anim = GetComponent<Animator>();
     }
 
+    // Método para reproducir la animación de golpe
     public void IsPunch()
     {
-        anim.Play(IS_Punch);
+        anim.Play(IS_Punch); // Activar la animación de golpe
     }
+
+    // Método para reproducir la animación de guardar golpe
     public void IsNoPunch()
     {
-        anim.Play(IS_NoPunch);
+        anim.Play(IS_NoPunch);  // Activar la animación de guardar golpe
     }
 }
