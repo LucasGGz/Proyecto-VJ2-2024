@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CalculoPlanePlayer : MonoBehaviour
 {
-    CamaraFuncionamiento camFunc;
+    CamaraFunctFollow functFollow;
     private new Camera camera;
     private Vector2 nearPlaneSize;
 
@@ -13,14 +13,14 @@ public class CalculoPlanePlayer : MonoBehaviour
 
     void Start()
     {
-        camFunc = GetComponent<CamaraFuncionamiento>();
+        functFollow = GetComponent<CamaraFunctFollow>();
         Camera = GetComponent<Camera>();
     }
 
     //se calcula el plano que va a estar cerca del jugador para los raycaces 
     public Vector3[] getCameraCollionPoint(Vector3 direction)
     {
-        Vector3 position = camFunc.Follow.position; //se lo situa en el player target
+        Vector3 position = functFollow.Follow.position; //se lo situa en el player target
                                                     //centro del plano
         Vector3 center = position + direction * (Camera.nearClipPlane + 0.1f); //y se lo aleja un poco al plano  
 

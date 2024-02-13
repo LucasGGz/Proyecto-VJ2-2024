@@ -19,7 +19,7 @@ public class InstanciaColliderWin : NetworkBehaviour
         if (other.CompareTag("Premio") && band)
         {
             band = false;
-            win.PremioFinalInServerRpc();// Llamar al método RPC en el script IntanciaWin para instanciar el premio final en la red
+            win.PremioFinalClientRpc();// Llamar al método RPC en el script IntanciaWin para instanciar el premio final en la red
 
             Debug.Log("El premio ah sido chcocado y ganaste");
         }

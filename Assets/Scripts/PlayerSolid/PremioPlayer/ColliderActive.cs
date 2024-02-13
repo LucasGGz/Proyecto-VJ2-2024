@@ -18,7 +18,7 @@ public class ColliderActive : NetworkBehaviour
         if (collider.CompareTag("PremioEstructura") && band)
         {
             band = false;
-            activePj.ActiveServerRpc(); //activa el premio
+            activePj.ActiveClientRpc(); //activa el premio
             Debug.Log("ActivastePremio");
         }
     }

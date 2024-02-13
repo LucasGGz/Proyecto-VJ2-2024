@@ -7,13 +7,6 @@ public class IntanciaWin : NetworkBehaviour
 {
     [SerializeField] private Transform PremioFinal;
 
-    // Método RPC para instanciar el premio final en el servidor
-    [ServerRpc(RequireOwnership = false)]
-    public void PremioFinalInServerRpc()
-    {
-        PremioFinalClientRpc();
-    }
-
     // Método RPC para instanciar el premio final en los clientes
     [ClientRpc]
     public void PremioFinalClientRpc()

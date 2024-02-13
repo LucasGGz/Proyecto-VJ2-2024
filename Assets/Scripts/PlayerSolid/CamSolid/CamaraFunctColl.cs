@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CamaraFuncionamiento : MonoBehaviour
+public class CamaraFunctColl : MonoBehaviour
 {
     public float maxDistance;
     CamaraFunctOrbit camOrbit;
@@ -13,35 +13,33 @@ public class CamaraFuncionamiento : MonoBehaviour
     private float distance;
     void Start()
     {
-        functFollow= GetComponent<CamaraFunctFollow>();
+        functFollow = GetComponent<CamaraFunctFollow>();
         camOrbit = GetComponent<CamaraFunctOrbit>();
         planePlayer = GetComponent<CalculoPlanePlayer>();
     }
 
     void LateUpdate()
     {
-     //   FuncionamientoCamara();
+        FuncionamientoCollideCamara();
     }
 
-    //Funcionamiento de la camara
-  /*  private void FuncionamientoCamara()
+    //Funcionamiento de la colision de los puntos calculados para la camara
+    private void FuncionamientoCollideCamara()
     {
         RaycastHit hit;
         distance = maxDistance;
         //se va a obtener los puntos del metodo del plano calculado
-        Vector3[] points = planePlayer.getCameraCollionPoint(camOrbit.CalculoOrbitajeCam()); //le pasamos el calculo de orbit a esos puntos
+        Vector3[] points = planePlayer.getCameraCollionPoint(camOrbit.CalculoOrbitacionCam()); //le pasamos el calculo de orbit a esos puntos
 
-        //se pasa por cad uno de los puntos y se hace un raycast 
+        //se pasa por cada uno de los puntos y se hace un raycast 
         foreach (Vector3 point in points)
         {
             //los puntos del raycast van desde cada punto del plano calculado hasta la direccion de la camara (pos de la cam )
-            if (Physics.Raycast(point, camOrbit.CalculoOrbitajeCam(), out hit, maxDistance))
+            if (Physics.Raycast(point, camOrbit.CalculoOrbitacionCam(), out hit, maxDistance))
             {
                 distance = Mathf.Min((hit.point - functFollow.Follow.position).magnitude, distance); // si colisiona algun punto se reubica la cam
             }
         }
 
-    }*/
-
- 
+    }
 }

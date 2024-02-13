@@ -14,7 +14,7 @@ public class ColliderDesactive : NetworkBehaviour
         if (other.CompareTag("Final") && band)
         {
             band = false;
-            desactive.DesactiveServerRpc();
+            desactive.DesactiveClientRpc();
         }
     }
 }

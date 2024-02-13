@@ -18,8 +18,6 @@ public class ObjectPremio : NetworkBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        transform.Rotate(0, 100 * Time.deltaTime, 0); //hacemos que gire el premio gire
         // Calcular la posición del premio alrededor del jugador utilizando funciones
         float pos_x = playerPos.position.x + Mathf.Cos(angulo * Mathf.Deg2Rad) * dist;
         float pos_y = playerPos.position.y + 1f;
