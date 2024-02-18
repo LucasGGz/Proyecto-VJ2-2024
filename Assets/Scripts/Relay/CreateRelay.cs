@@ -10,6 +10,10 @@ using UnityEngine;
 
 public class CreateRelay : MonoBehaviour
 {
+    private string joinCode;
+
+    public string JoinCode { get => joinCode; set => joinCode = value; }
+
     // Comando para iniciar un servidor de relay
     [Command]
     public async void Dale()
@@ -19,8 +23,8 @@ public class CreateRelay : MonoBehaviour
             // Crea una asignación de Relay para dos jugadores
             Allocation allocation = await RelayService.Instance.CreateAllocationAsync(2);
             // Obtiene el código de unión de la asignación y lo imprime en la consola
-            string joinCode = await RelayService.Instance.GetJoinCodeAsync(allocation.AllocationId);
-            Debug.Log(joinCode);
+            JoinCode = await RelayService.Instance.GetJoinCodeAsync(allocation.AllocationId);
+            Debug.Log(JoinCode);
 
             // Configura el servidor de relay para el transporte de Unity y lo inicia
             var relayServerData = new RelayServerData(allocation, "dtls");

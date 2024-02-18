@@ -6,7 +6,10 @@ using UnityEngine;
 public class DesactivePremioPJ : NetworkBehaviour
 {
     public GameObject obj;
-   
+    private void Start()
+    {
+        Desactive();
+    }
     // Método RPC para mandar un mensaje a los clientes
     [ClientRpc]
     public void DesactiveClientRpc()

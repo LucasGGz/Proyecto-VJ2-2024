@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class Punch : NetworkBehaviour
 {
-
     private PunchAnimator PunchAnim;
     void Start()
     {
@@ -14,7 +13,10 @@ public class Punch : NetworkBehaviour
     // Método llamado cuando el objeto se instancia en la red
     public override void OnNetworkSpawn()
     {
-        MechanismPunchInServerRpc();
+        if (IsOwner)
+        {
+            MechanismPunchInServerRpc();
+        }   
     }
 
     // Método RPC para iniciar el mecanismo de golpes en el servidor

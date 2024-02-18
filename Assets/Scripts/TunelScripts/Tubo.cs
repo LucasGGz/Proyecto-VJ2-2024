@@ -14,7 +14,10 @@ public class Tubo : NetworkBehaviour
     // Método llamado cuando el objeto se instancia en la red
     public override void OnNetworkSpawn()
     {
-        MechanismInServerRpc();
+        if (IsOwner)
+        {
+            MechanismInServerRpc();
+        }
     }
 
     // Método RPC para iniciar el mecanismo en el servidor

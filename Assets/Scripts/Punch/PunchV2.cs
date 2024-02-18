@@ -14,7 +14,10 @@ public class PunchV2 : NetworkBehaviour
     // Método llamado cuando el objeto se instancia en la red
     public override void OnNetworkSpawn()
     {
-        MechanismPunchInServerRpc();
+        if (IsOwner)
+        {
+            MechanismPunchInServerRpc();
+        }
     }
 
     // Método RPC para iniciar el mecanismo de golpes en el servidor
