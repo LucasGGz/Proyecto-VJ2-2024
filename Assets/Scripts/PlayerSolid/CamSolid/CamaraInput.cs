@@ -10,7 +10,7 @@ public class CamaraInput : MonoBehaviour
     public float Hor { get => hor; set => hor = value; }
     public float Ver { get => ver; set => ver = value; }
 
-    //inputs para el mouse
+    //Inputs para el mouse
     void Update()
     {
         //Se le asignan los Inputs

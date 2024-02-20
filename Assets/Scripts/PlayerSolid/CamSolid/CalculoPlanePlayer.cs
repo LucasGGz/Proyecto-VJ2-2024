@@ -17,15 +17,15 @@ public class CalculoPlanePlayer : MonoBehaviour
         Camera = GetComponent<Camera>();
     }
 
-    //se calcula el plano que va a estar cerca del jugador para los raycaces 
+    //Se calcula el plano que va a estar cerca del jugador para los raycaces 
     public Vector3[] getCameraCollionPoint(Vector3 direction)
     {
-        Vector3 position = functFollow.Follow.position; //se lo situa en el player target
-                                                    //centro del plano
-        Vector3 center = position + direction * (Camera.nearClipPlane + 0.1f); //y se lo aleja un poco al plano  
+        Vector3 position = functFollow.Follow.position; //Se lo situa en el player target
+                                                    //Centro del plano
+        Vector3 center = position + direction * (Camera.nearClipPlane + 0.1f); //Y se lo aleja un poco al plano  
 
-        Vector3 right = transform.right * NearPlaneSize.x; //se calcula para ir a la derecha
-        Vector3 up = transform.up * NearPlaneSize.y;// y arriba
+        Vector3 right = transform.right * NearPlaneSize.x; //Se calcula para ir a la derecha
+        Vector3 up = transform.up * NearPlaneSize.y;// Y arriba
 
         //Puntos que van a partir desde el centro hacia las 4 esquinas del plano 
         return new Vector3[]

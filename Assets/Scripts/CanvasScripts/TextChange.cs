@@ -14,12 +14,11 @@ public class TextChange : NetworkBehaviour
     // Update is called once per frame
     void Update()
     {
-        ChangeCodeTextClientRpc();
+        ChangeCodeTextServerRpc();
     }
 
-    //[ClientRpc] AfterCodeGenerationClientRpc
-    [ClientRpc]
-    public void ChangeCodeTextClientRpc()
+    [ServerRpc]
+    public void ChangeCodeTextServerRpc()
     {
         Code.text = createRelay.JoinCode; // Actualiza el texto del TMP_Text con el código generado de la clase CreateRelay
     }

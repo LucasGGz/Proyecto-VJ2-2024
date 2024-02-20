@@ -17,7 +17,7 @@ public class PlayerJump : NetworkBehaviour
 
     void Start()
     {
-        //obtengo el controller y el script animator que tiene el control de las animaciones
+        //Obtengo el controller y el script animator que tiene el control de las animaciones
         controller = GetComponent<CharacterController>();
         animator = GetComponent<PlayerAnimator>();
     }
@@ -29,7 +29,7 @@ public class PlayerJump : NetworkBehaviour
         // Aplicar la gravedad solo si no está en el suelo, en el else
         if (controller.isGrounded)
         {
-            //con el espacio el jugador podra saltar, se activan o desactivan las animaciones
+            //Con el espacio el jugador podra saltar, se activan o desactivan las animaciones
             if (Input.GetButtonDown("Jump"))
             {
                 animator.Running = false;

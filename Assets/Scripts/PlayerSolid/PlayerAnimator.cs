@@ -29,7 +29,7 @@ public class PlayerAnimator : NetworkBehaviour
     {
         if (!IsOwner) return; // Verificar si este objeto es el dueño en la red
 
-        //pasamos la variable de tipo string y su metodo correspondiente
+        //Pasamos la variable de tipo string y su metodo correspondiente
         animator.SetBool(IS_WALKING, IsWalking());
         animator.SetBool(IS_RRUNNING, IsRunning());
         animator.SetBool(IS_JUMPING, IsJumping());

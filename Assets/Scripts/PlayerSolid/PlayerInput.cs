@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerInput : MonoBehaviour
 {
-    //variables para los inputs y se establecen sus setters y getters
+    //Variables para los inputs y se establecen sus setters y getters
     private float horizontal;
     private float vertical;
 
@@ -14,7 +14,7 @@ public class PlayerInput : MonoBehaviour
   
     void Update()
     {
-        //se inicializan los siguientes inputs
+        //Se inicializan los siguientes inputs
         Horizontal = Input.GetAxisRaw("Horizontal");
         Vertical = Input.GetAxisRaw("Vertical");
     }

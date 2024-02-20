@@ -14,7 +14,7 @@ public class PlayerMov : NetworkBehaviour
     private Vector3 movePlayer;
     private Vector3 playerInput;
     private Vector3 moveDir;
-    //Varaibles para la obtencion de componentes
+    //Variables para la obtencion de componentes
     private PlayerAnimator animator;
     private PlayerCamDire camPlayerDire;
     private PlayerInput plaInput;
@@ -34,13 +34,13 @@ public class PlayerMov : NetworkBehaviour
 
     private void Update()
     {
-        //verificar si el la siguientes instancia ya no es el propietario, podra controlar su propio Player
+        // Si el cliente actual no es el propietario, detiene la ejecucion del resto del codigo
         if (!IsOwner) return;
 
         playerInput = new Vector3(plaInput.Horizontal, 0, plaInput.Vertical).normalized;
-        //calcular la direccion de movimiento
+        //Calcular la direccion de movimiento
         moveDir = playerInput.x * camPlayerDire.CamRight + playerInput.z * camPlayerDire.CamForward;
-        //darle al player la direccion de mov y una velocidad
+        //Darle al player la direccion de mov y una velocidad
         movePlayer = moveDir * Speed;
 
         // Verificar si el jugador se mueve o no activara sus respectivas animaciones  

@@ -8,17 +8,14 @@ public class CamSpawn : NetworkBehaviour
 {
     public GameObject Camara3era;
 
-    public AudioListener audioListener;
-
-    //metodo de NetworkBehaviour para que se ejecute en red
+    //Metodo de NetworkBehaviour para que se ejecute en red
     public override void OnNetworkSpawn()
     {
         //Si somos el propietario de ese GO
         if (IsOwner)
         {
-            // Habilitar la cámara y el AudioListener si somos el propietario
+            // Habilitar la cámara si somos el propietario
             Camara3era.SetActive(true);
-            audioListener.enabled = true;
         }
         else
         {

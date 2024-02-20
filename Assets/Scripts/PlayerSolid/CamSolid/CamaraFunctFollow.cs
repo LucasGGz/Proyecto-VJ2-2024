@@ -16,10 +16,9 @@ public class CamaraFunctFollow : MonoBehaviour
         CamaraFunctColl = GetComponent<CamaraFunctColl>();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        transform.position = follow.position + camOrbit.CalculoOrbitacionCam() * CamaraFunctColl.Distance; //para que la cam siga al jugador y pueda rodear al pj
-        transform.rotation = Quaternion.LookRotation(follow.position - transform.position); //para que la cam pueda rotar al jguador 
+        transform.position = follow.position + camOrbit.CalculoOrbitacionCam() * CamaraFunctColl.Distance; //Para que la cam siga al jugador y pueda rodear al pj
+        transform.rotation = Quaternion.LookRotation(follow.position - transform.position); //Para que la cam pueda rotar al jguador 
     }
 }

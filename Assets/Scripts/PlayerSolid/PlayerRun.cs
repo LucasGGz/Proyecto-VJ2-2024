@@ -12,10 +12,9 @@ public class PlayerRun : NetworkBehaviour
         playerMov = GetComponent<PlayerMov>(); //obtengo el script
     }
 
-    // Update is called once per frame
     void Update()
     {
-        //con el shift el jugador podra correr y se modifica el valor de la variable speed del script PlayerMov
+        //Con el shift el jugador podra correr y se modifica el valor de la variable speed del script PlayerMov
         if (Input.GetKey(KeyCode.LeftShift))
         {
             playerMov.Speed = 10f;
