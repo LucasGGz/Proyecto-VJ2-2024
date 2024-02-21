@@ -1265,7 +1265,6 @@ GameObject:
   m_Component:
   - component: {fileID: 316442523082347001}
   - component: {fileID: 821461222807915672}
-  - component: {fileID: 1994711770692128860}
   - component: {fileID: 8045258347986623518}
   - component: {fileID: 7581302640475561537}
   - component: {fileID: 2061450003759560392}
@@ -1274,6 +1273,7 @@ GameObject:
   - component: {fileID: 3673689319457748732}
   - component: {fileID: 857183257041841207}
   - component: {fileID: 1870698583034941607}
+  - component: {fileID: 1503930725282702958}
   m_Layer: 0
   m_Name: CamaraPlayer
   m_TagString: Untagged
@@ -1347,14 +1347,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &1994711770692128860
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4534067584756256024}
-  m_Enabled: 0
 --- !u!114 &8045258347986623518
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1502,6 +1494,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76e0927d462f0b14899325b4c78b48e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!81 &1503930725282702958
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4534067584756256024}
+  m_Enabled: 1
 --- !u!1 &4557082887858798718
 GameObject:
   m_ObjectHideFlags: 0
@@ -1769,7 +1769,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Camara3era: {fileID: 4534067584756256024}
-  audioListener: {fileID: 1994711770692128860}
+  audioListener: {fileID: 0}
 --- !u!114 &663272449092216959
 MonoBehaviour:
   m_ObjectHideFlags: 0
