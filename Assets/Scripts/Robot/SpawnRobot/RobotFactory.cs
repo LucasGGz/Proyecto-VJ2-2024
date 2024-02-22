@@ -23,6 +23,6 @@ public class RobotFactory: MonoBehaviour
             }
         }
         // Retorna el robot encontrado
-        return robt;
+        return Instantiate(robt);
     }
 }
