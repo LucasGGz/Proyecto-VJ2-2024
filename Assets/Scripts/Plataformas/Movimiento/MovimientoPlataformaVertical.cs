@@ -10,13 +10,13 @@ public class MovimientoPlataformaVertical : IMovimientoPlataforma
 
     private Vector3 posicionInicial;
 
-    // Constructor que guarda la posición inicial del objeto
+    // Constructor que guarda la posicion inicial del objeto
     public MovimientoPlataformaVertical(Transform transform)
     {
         posicionInicial = transform.position;
     }
 
-    // Método para mover la plataforma
+    // Metodo para mover la plataforma
     public void Mover(Transform transform)
     {
         Vector3 posicionObjetivo = posicionInicial + Vector3.up * Mathf.Sin(Time.time * velocidad) * rango;

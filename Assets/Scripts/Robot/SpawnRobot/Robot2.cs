@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Unity.Netcode;
 
-// Clase para el segundo tipo de robot
+// Clase para definir el ID del segundo tipo de robot.
 public class Robot2 : Robot
 {
 

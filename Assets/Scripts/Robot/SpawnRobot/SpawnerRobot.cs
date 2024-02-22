@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-// Clase que maneja la creación y el spawn de robots en el juego.
+// Clase que maneja la creacion y el spawn de robots en el juego.
 public class SpawnerRobot : MonoBehaviour
 {
     [SerializeField] private RobotFactory robotFactory;

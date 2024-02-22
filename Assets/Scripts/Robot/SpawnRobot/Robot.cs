@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Unity.Netcode;
 
-// Este es el script base para un robot.
+// Este es el script base y contiene la informacion basica sobre el ID del robot.
 public abstract class Robot : NetworkBehaviour
 {
     [SerializeField] private string id;

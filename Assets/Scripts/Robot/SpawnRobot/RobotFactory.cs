@@ -2,17 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-// Clase que actúa como una fábrica de robots.
+// Clase que actua como una fabrica de robots.
 public class RobotFactory: MonoBehaviour
 {
     [SerializeField] private Robot[] robots;
     
-    // Método para crear un robot dado su ID.
+    // Metodo para crear un robot dado su ID.
     public Robot Create (string id)
     {
         Robot robt = null;
 
-        // Itera a través de la lista de robots disponibles.
+        // Itera a traves de la lista de robots disponibles.
         foreach(var robot in robots)
         {
              // Si encuentra un robot con el ID proporcionado, lo asigna
