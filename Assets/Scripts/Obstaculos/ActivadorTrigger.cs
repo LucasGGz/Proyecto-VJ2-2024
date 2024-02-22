@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class ActivadorTrigger : MonoBehaviour
 {
-    [SerializeField] private GeneradorObstaculos generador;
-    [SerializeField] private GeneradorObstaculos generadorInvertido;
+    [SerializeField] private ActivadorGenerador generador;
+    [SerializeField] private ActivadorGenerador generadorInvertido;
 
     //Metodo de collision
     private void OnTriggerEnter(Collider other)
@@ -18,4 +18,5 @@ public class ActivadorTrigger : MonoBehaviour
             gameObject.SetActive(false);
         }
     }
+
 }
