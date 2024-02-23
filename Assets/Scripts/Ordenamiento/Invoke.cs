@@ -12,7 +12,7 @@ public class Invoke : NetworkBehaviour
     {
         // Obtener referencias a los componentes Initialize e Isortable
         initialize = GetComponent<Initialize>();
-        isortable = GetComponent<Isortable>();
+        isortable = GetComponent<Bubble>();
     }
 
     // Método llamado en el servidor para iniciar la acción en los clientes
@@ -27,6 +27,6 @@ public class Invoke : NetworkBehaviour
     public void ActionClientRpc()
     {  
         initialize.InitializeRandom();// Inicializa los objetos 
-        StartCoroutine(isortable.BubbleSort(initialize.inst));  // Inicia el proceso de ordenamiento de burbuja en los objetos inicializados
+        StartCoroutine(isortable.Sort(initialize.inst));  // Inicia el proceso de ordenamiento de burbuja en los objetos inicializados
     }
 }

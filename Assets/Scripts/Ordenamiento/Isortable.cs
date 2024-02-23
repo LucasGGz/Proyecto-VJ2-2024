@@ -5,5 +5,5 @@ using UnityEngine;
 //Interfaz para poder dar la logica del algoritmo Bubble Sort 
 public interface Isortable 
 {
-    public IEnumerator BubbleSort(GameObject[] unsortedList);
+    public IEnumerator Sort(GameObject[] unsortedList);
 }
